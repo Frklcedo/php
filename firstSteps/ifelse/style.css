@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+h1{
+    color: white;
+}
+h2{
+    color: white;
+}
+label{
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
