@@ -4,7 +4,7 @@
 
     echo $nomen." nomen meus est<br>";
 
-    $nomen.="lmakedo"; //Add to the variable what it's beeing concatenated
+    $nomen.="lmakedo"; //Add to the variable what it's being concatenated
 
     echo $nomen."<br>";
 
