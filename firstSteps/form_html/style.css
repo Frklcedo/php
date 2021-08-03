@@ -1,0 +1,25 @@
+body{
+    font:0.9em Arial,Helvetica,sans-serif;
+}
+input.age{
+    width:30px;
+}
+input:hover{
+    
+    border:2px solid #E61149;
+}
+.button{
+    color:#f8e4ef;
+    background-color:#E61149;
+    border:3px solid #E61149;
+    font: bold 1.6em monospace;
+    height:40px;
+    width:80px;
+    padding:6px; 
+    border-radius: 10px;
+    text-decoration: none;
+}
+.button:hover{
+    color:#E61149;
+    background-color:#f8e4ef;            
+}
