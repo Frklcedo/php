@@ -1,6 +1,6 @@
 <?php
 
-class Animal {
+abstract class Animal {
 
 
     public function sound(){
