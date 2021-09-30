@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color:#101010;
+    padding: 40px;
+    margin-bottom: 60px;
+}
+header h1{
+    color: white;
+    text-align: center;
+}
+nav,main{
+    margin: auto;
+    padding: 20px 0;
+    max-width: 300px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.300);
+}
+nav ul{
+    text-align: center; 
+}
+nav li{
+    padding: 15px;
+    margin: 10px auto;
+}
+nav a{
+    color: black;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+nav li a:hover{
+    text-decoration: underline;
+}
+nav li a:active{
+    color: crimson;
+}
+nav li:hover{
+    text-decoration: underline;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+}
+nav.return{
+    margin-top: 20px;
+    background-color: #101010;
+    text-align: center;
+    padding: 15px 0;
+    max-width: 150px;
+}
+nav.return a{
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+nav.return:hover{
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+}
+main{
+    text-indent: 20px;
+}
+main label{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+main .formtext{
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    padding: 10px;
+    text-indent: 20px;
+    color: #252525;
+    outline: none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.050);
+}
+main .formtext:hover{
+    border-bottom:solid 1px #cacaca63;
+}
+main .formtext:focus{
+    border-bottom:solid 1px #cacaca63;
+}
+main input[type=submit]{
+    display: block;
+    width: 60%;
+    padding: 15px 0;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #101010;
+    max-width: 150px;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+main input[type=submit]:hover{
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.400);
+}
+main input[type=submit].displayus{
+    max-width: none;
+    width: 70%;
+    padding: 5px;
+    font-size: 1em;
+}
+main p{
+    text-indent: 0;
+    text-align: center;
+}
+main .just p, main.just p{
+    text-indent: 20px;
+    text-align: justify;
+}
+hr{
+    margin: 20px auto;
+    border-color: #cacaca63;
+}
+h1#Delete{
+    font-size: 1.4em;
+    text-align: center;
+    text-indent: 0;
+    padding: 10px;
+}
+div.form-user{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+form.form-user, form.form-user input[type=submit]{
+    flex: 1;
+}
+form.form-user input[type=submit]{
+    width: 90%;
+    font-size: 1em;
+    padding: 5px 10px;
+}

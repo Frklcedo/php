@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>New user</title>
+</head>
+<body>
+    <header>
+        <h1>
+            New account
+        </h1>
+    </header>
+    <main>
+        <form action="inserted.php" method="post">
+            
+            <label for="name">What's your name?</label>
+            <input class="formtext" type="text" name="name" placeholder="Your name..." required>
+
+            <label for="passwd">Create password</label>
+            <input class="formtext" type="password" name="passwd" placeholder="**********" required>
+
+            <label for="passwdcon">Confirm your password</label>
+            <input class="formtext" type="password" name="passwdcon" placeholder="**********" required>
+
+            <input type="submit" value="Send">
+        </form>
+    </main>
+    <nav class="return">
+        <a href="index.html" rel="prev" target="_self">Return</a>
+    </nav>
+</body>
+</html>

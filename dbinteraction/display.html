@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display users</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Search and display users
+        </h1>
+    </header>
+    <main>
+        <form action="research.php" method="post">
+
+            <label for="research">What's your name?</label>
+            <input class="formtext" type="text" name="research" placeholder="Search user..." required>
+            <input class="displayus" type="submit" value="Search">
+        </form>
+        <hr id="display">
+        <form action="displayed.php">
+            <input class="displayus" type="submit" value="Show all users">
+        </form>
+    </main>
+    <nav class="return">
+        <a href="index.html" rel="prev" target="_self">Return</a>
+    </nav>
+</body>
+</html>
