@@ -1,6 +1,6 @@
 <?php
 
-$conn = new PDO("mysql:dbname=dbphp7;host=localhost", "root", '');
+require_once ("logindb.php");
 
 $stmt = $conn->prepare("SELECT * FROM tb_users ORDER BY deslogin");
 
