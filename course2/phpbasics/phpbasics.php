@@ -50,3 +50,12 @@
     $num = ( int ) '5';
     print ( BR );
     var_dump( $num );
+
+    // BOOLEANS
+    $isBool = (bool) true;
+    echo BR . is_bool($isBool);
+    if($isBool){
+        echo BR;
+        var_dump($isBool);
+    }
+    echo BR;
