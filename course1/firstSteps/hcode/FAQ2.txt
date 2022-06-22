@@ -1,0 +1,5 @@
+1 - Foi retornado o erro "Permission denied". O que fazer?
+    https://www.udemy.com/course/curso-php-7-online/learn#questions/6832692
+
+2 - Como instalar o Git no Mac?
+    https://www.udemy.com/course/curso-php-7-online/learn#questions/8407556
