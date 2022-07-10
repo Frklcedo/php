@@ -109,3 +109,154 @@
     $x = log(-1);
     var_dump(is_nan($x));
     var_dump($x);
+
+    // string
+
+    $firstName = "Frkl";
+    $lastName = 'cedo';
+    $fullName = "$firstName{$lastName}";
+    echo "<br /> $fullName";
+    $fullName = "$firstName[0] ${lastName}";
+    echo "<br /> $fullName";
+    echo "<br /> $fullName[2]";
+    echo "<br /> $fullName[0]";
+    echo "<br /> $fullName[-1]"; // inverted access
+    // $fullName[0] = 'f';
+    // echo "<br /> $fullName";
+
+    $fullName = "$firstName{$lastName}";
+    echo BR;
+    var_dump($fullName);
+    $fullName[8]= "!";
+    echo BR;
+    var_dump($fullName);
+    $fullName[11]= "!";
+    echo BR;
+    var_dump($fullName);
+
+    // Heredoc == same as double quotes
+    // Has and identifier the opens and closes the block
+    $text = <<<TEXT
+
+                   line 1, $firstName[0]
+                   line 2, $firstName[1]
+                   line 3, $firstName[2]
+                   line 4, $firstName[3]
+
+    TEXT;
+
+    echo nl2br($text); // function that converts breakline char \n to <br />
+
+    // Nowdoc == same as single quotes
+    // just put the identifier in single quotes
+    $text = <<<'TEXT'
+
+                   line 1, $firstName[0]
+                   line 2, $firstName[1]
+                   line 3, $firstName[2]
+                   line 4, $firstName[3]
+
+    TEXT;
+
+    echo nl2br($text);
+
+    $html = <<<HTML
+        <div style="text-align:center; background-color: #dddddd">
+            <h1>Hello $fullName</h1>
+        </div>
+
+    HTML;
+
+    echo $html;
+
+    // null NuLl NULL
+    $x = null;
+    echo $x;
+    var_dump($x);
+    echo BR . "is null? ";
+    var_dump( is_null( $x ) );
+
+    $x = 123;
+
+    unset($x); // becomes null
+
+    // array
+    // $programmingLanguages = array('php', 'javascript', 'python'); // same thing
+    $programmingLanguages = ['php', 'c++', 'python'];
+    echo BR;
+    echo $programmingLanguages[0];
+    if(isset($programmingLanguages[3])){
+        echo $programmingLanguages[0];
+    }
+    $programmingLanguages[1] = 'javascript';
+
+    echo BR;
+    echo '<pre>';
+    print_r($programmingLanguages);
+    echo '</pre>';
+    echo count($programmingLanguages);
+
+    $programmingLanguages[] = 'C++';
+    echo '<pre>';
+    print_r($programmingLanguages);
+    echo '</pre>';
+    echo count($programmingLanguages);
+
+    array_push($programmingLanguages, 'C', 'Rust');
+    echo '<pre>';
+    print_r($programmingLanguages);
+    echo '</pre>';
+    echo count($programmingLanguages);
+
+    $programmingLanguages = [
+      'frontend' => 'javascript',
+      'backend' => ['php', 'python'],
+      'database' => 'mariadb'
+    ];
+    echo '<pre>';
+    print_r($programmingLanguages);
+    echo '</pre>';
+    echo count($programmingLanguages);
+    echo '<pre>';
+    print_r($programmingLanguages['backend']);
+    echo '</pre>';
+    $newTool = 'cms';
+    $programmingLanguages[$newTool] = 'wordpress';
+    echo '<pre>';
+    print_r($programmingLanguages);
+    echo '</pre>';
+    echo $programmingLanguages['backend'][0];
+
+    $arr = ['f', 'r', 'k', 'l', 50 => 'c', 'e', 'd', 'o'];
+    echo '<pre>';
+    print_r($arr);
+    echo '</pre>';
+    echo array_shift($arr);
+    echo '<pre>';
+    print_r($arr);
+    echo '</pre>';
+    $arr = ['f', 'r', 'k', 'l', 50 => 'c', 'e', 'd', 'o'];
+    echo '<pre>';
+    print_r($arr);
+    echo '</pre>';
+    unset($arr[50]);
+    echo '<pre>';
+    print_r($arr);
+    echo '</pre>';
+    $arr = ['f', 'r', 'k', 'l', 'sn' => 'c', 50 => 'e', 'd', 'o'];
+    echo '<pre>';
+    print_r($arr);
+    echo '</pre>';
+    unset($arr[50], $arr['sn']);
+    echo '<pre>';
+    print_r($arr);
+    echo '</pre>';
+    $arr[] = 'a';
+    echo '<pre>';
+    print_r($arr);
+    echo '</pre>';
+    var_dump(array_key_exists(51, $arr));
+    var_dump(array_key_exists('fn', $arr));
+    if(array_key_exists(51, $arr)){
+        echo $arr[51];
+    }
