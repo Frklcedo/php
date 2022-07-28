@@ -95,3 +95,84 @@ $somenull = null;
 $z = $somenull ?? 'somenull is null';
 echo $z;
 echo '<br />';
+
+// @ operator -- not recommended
+
+$x = @file('fsdakfasd.txt');
+unset($x);
+
+// and e xor
+
+
+$x = true;
+$y = false;
+
+$z = $x && $y;
+
+echo '<br />' . var_dump($z);
+
+$z = $x and $y; // semelhante ao && mas com muito menos precedência
+
+echo '<br />' . var_dump($z);
+
+// bitwise operators ( & , | ^ ~ << >> )
+
+$x = 6; // 110
+$y = 3; // 011
+
+        // 010 binary &&
+
+$z = $x & $y;
+
+echo '<br />' . var_dump($z);
+
+        // 111 binary ||
+
+$z = $x | $y;
+
+echo '<br />' . var_dump($z);
+
+        // 101 binary xor (or exclusivo)
+
+$z = $x ^ $y;
+
+echo '<br />' . var_dump($z);
+
+        //  ~ transforma 110 em 001
+        //  001 ~ inverte bits
+
+$z = ~$x & $y;
+
+echo '<br />' . var_dump($z);
+
+
+$z = $x << $y;  // multiplica os bits por 2
+                // nesse caso pega o 110 e adiciona 0 no fim $y(3) vezes
+                // 110000 = 48
+
+echo '<br />' . var_dump($z);
+
+$x = $z >> ( $y + 1 );  // divide os bits por 2
+                // nesse caso pega o 110000 e remove os bits no fim $y + 1(4) vezes
+                // 11 = 3
+
+echo '<br />' . var_dump($x);
+
+
+// Array operators
+
+$x = ['a', 'b', 'c'];
+$y = ['d', 'e', 'f', 'g', 'h'];
+
+$z = $x + $y; // array union - append elements of $y if they don't exist in $x
+echo '<pre>';
+var_dump( $z );
+echo '</pre>';
+
+$x = ['a', 'b', 'c'];
+$y = [ 3 => 'd', 'e', 'f'];
+
+$z = $x + $y; // array union - append elements of $y if they don't exist in $x
+echo '<pre>';
+var_dump( $z );
+echo '</pre>';
