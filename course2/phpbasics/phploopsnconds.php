@@ -34,7 +34,7 @@ foreach($arr as $num){
 
 function x(){
 
-    sleep(3);
+    // sleep(3);
 
     echo "Done <br />";
 
@@ -71,3 +71,47 @@ switch(x()){
 }
 
 echo "<br />";
+
+// match expression
+
+$payStts = 3;
+
+// works
+// match($payStts ){
+//     1 => print 'Paid',
+//     2=> print 'Payment declined',
+
+//     0 => print 'Pending Payment'
+// };
+
+// switch does loose comparison ==
+// match does strict comparison ===
+$payDisplay = match($payStts ){
+    1 => 'Paid',
+    2,3 => 'Payment declined',
+
+    0 => 'Pending Payment',
+
+    default => 'Unknown Payment Status'
+};
+
+echo $payDisplay;
+
+// declare & ticks
+
+function onTick(){
+    echo "<br />Tick";
+}
+
+register_tick_function('onTick');
+
+declare(ticks=1);
+
+$i = 0;
+$l = 10;
+
+while($i < $l){
+    echo '<br />' . $i++;
+}
+
+// declare(strict_types=1); // makes all php variables strict
