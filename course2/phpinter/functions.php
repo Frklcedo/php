@@ -99,3 +99,9 @@ function displayPerson(string $name, int $age, float $money){
     echo "Total possessions: $money <br />";
     echo "<br />";
 }
+
+br();
+br();
+br("End of functions.php file");
+br();
+br();
