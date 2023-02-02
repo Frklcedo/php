@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 $x = require('first-include.php');
 
 echo '<pre>';
@@ -45,4 +47,28 @@ br();
 
 // returns mixed values
 var_dump(returnsMixed());
+br('<br />');
+
+br("Type hinting");
+
+var_dump( multiplicate(5, 6.5) );
+
+br('Passing by reference');
+$x = 6;
+divideByReference($x);
+br( (string) $x );
+
+br("Spread/Splat Operator");
+$toSum = [4,6,7,3];
+echo sum(...$toSum);
+
 br();
+br("PHP8 named args");
+
+$aPerson = [
+    'money' => 10000,
+    'name' => "Snake Solid",
+    'age' => 45,
+];
+displayPerson(age: 22, money: 3000.5, name: 'Frkl');
+displayPerson(...$aPerson);

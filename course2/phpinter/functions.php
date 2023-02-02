@@ -23,8 +23,8 @@ nestedFunction();
 function foo(){
     echo 'foo';
 }
-function br(){
-    echo '<br />';
+function br(string $text = ''){
+    echo "$text <br />";
 }
 function bar(){
     return 'bar';
@@ -76,4 +76,26 @@ function returnsMixed():mixed{
     return 1;
     return true;
 
+}
+
+function multiplicate(int|float $x, int|float $y = 1): int|float{
+    return $x * $y;
+}
+
+function divideByReference( &$x ){
+    if($x % 2 == 0){
+        $x /= 2;
+    }
+}
+
+function sum(int ...$n){
+    return array_sum($n);
+}
+
+// php8 named args
+function displayPerson(string $name, int $age, float $money){
+    echo "Name: $name <br />";
+    echo "Age: $age <br />";
+    echo "Total possessions: $money <br />";
+    echo "<br />";
 }
