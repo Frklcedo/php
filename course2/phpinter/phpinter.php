@@ -72,3 +72,46 @@ $aPerson = [
 ];
 displayPerson(age: 22, money: 3000.5, name: 'Frkl');
 displayPerson(...$aPerson);
+
+br(br(' '));
+
+br('Variable Functions');
+$funcName = 'sum';
+if(is_callable($funcName)){
+    br( (string)$funcName(3,5,6,1) );
+}
+else{
+    br('Not callable');
+}
+
+br();
+$anom = function(){
+    return 'Anonimous functions';
+};
+br($anom());
+br();
+$closure = 'This is a closure';
+$closureFunction = function()use($closure):string{
+    $closure .= '<-<-';
+    return $closure;
+};
+br($closureFunction());
+br($closure);
+
+$aCallback = function(callable $aFunc, int|float ...$numbers){
+    return $aFunc(...array_map(function($number){
+        return $number * 2;
+    }, $numbers));
+};
+
+br(( string ) $aCallback('sum', 1, 2, 3, 4, 5));
+
+$arr = [1, 2, 3, 4, 5];
+$x = 0;
+
+$arr2 = array_map(fn($number) => $number*$number + ++$x, $arr);
+
+br();
+print_r($arr2);
+br();
+br((string)$x);

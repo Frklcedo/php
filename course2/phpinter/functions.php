@@ -25,6 +25,7 @@ function foo(){
 }
 function br(string $text = ''){
     echo "$text <br />";
+    return '';
 }
 function bar(){
     return 'bar';
