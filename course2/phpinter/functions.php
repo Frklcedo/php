@@ -27,6 +27,11 @@ function br(string $text = ''){
     echo "$text <br />";
     return '';
 }
+function prearr($arr){
+    br('<pre>');
+    print_r($arr);
+    br('</pre>');
+}
 function bar(){
     return 'bar';
 }
